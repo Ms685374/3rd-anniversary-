@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&amp;family=Poppins:wght@300;400;600&amp;display=swap');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--primary: #ff6b9c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--secondary: #ffd1dc;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--accent: #ff4081;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--text: #2c3e50;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Poppins', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(45deg, #ffe6ea 0%, #ffd1dc 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow-x: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.floating-hearts {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.9);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Dancing Script', cursive;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 3.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1200px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.memory-grid {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.memory-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.8);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(5px);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.memory-card:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-10px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.95);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.photo-gallery {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow-x: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>scroll-behavior: smooth;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-overflow-scrolling: touch;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>scrollbar-width: thin;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>scrollbar-color: var(--primary) var(--secondary);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.photo-gallery::-webkit-scrollbar {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.photo-gallery::-webkit-scrollbar-track {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: var(--secondary);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.photo-gallery::-webkit-scrollbar-thumb {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.photo-item {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex: 0 0 300px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.photo-item img {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>object-fit: cover;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.photo-item::after {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: opacity 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.photo-item:hover::after {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.photo-item:hover img {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: scale(1.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.countdown-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.9);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 2rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.countdown {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.countdown-item {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.countdown-number {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.countdown-label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.message-board {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.95);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 2rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.special-moment {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Dancing Script', cursive;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 2rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-top: 2px solid var(--secondary);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 2px solid var(--secondary);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes floatHeart {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0% {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>transform: translateY(0) rotate(0deg);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>opacity: 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>100% {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>transform: translateY(-100vh) rotate(360deg);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.heart {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: floatHeart 4s linear infinite;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes float {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0%, 100% {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>transform: translateY(0);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>50% {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>transform: translateY(-10px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.music-player {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>right: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.9);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 1000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: float 3s ease-in-out infinite;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.music-player:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: scale(1.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.milestone-timeline {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 2rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.timeline-item {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 1rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.95);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.timeline-item:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: scale(1.02);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.love-quote {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 2rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="floating-hearts" id="hearts-container"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;A Universe Conspired, and You Happened ❤️&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="countdown-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Celebrating Our Journey&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="countdown" id="countdown"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="countdown-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="countdown-number" id="hours"&gt;00&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="countdown-label"&gt;Hours&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="countdown-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="countdown-number" id="minutes"&gt;00&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="countdown-label"&gt;Minutes&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="countdown-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="countdown-number" id="seconds"&gt;00&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="countdown-label"&gt;Seconds&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="memory-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="memory-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Our First Meeting🌟&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Just another normal day, nothing special… but little did I know, something big was about to happen. It wasn’t just meeting someone—it was like finding a missing piece of something I never knew I was searching for.. You, Sanjana, just happened, like a beautiful surprise I didn’t see coming.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="memory-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Our First Date🌙&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Not about fancy places or big plans—just us, talking, being ourselves, feeling like nothing else in the world mattered. That’s all it took to make it special.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="memory-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Special Moments💫&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;The late-night talks, the way you suddenly go silent and think, the way you laugh, the way you just get me, the small things you do without even realizing… Every little moment with you is something I want to keep forever...&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="photo-gallery"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="photo-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://i.imgur.com/rucdrpP.png" alt="Memory 1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="photo-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://i.imgur.com/t3YJZOc.jpeg" alt="Memory 2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="photo-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://i.imgur.com/jbTVcW1.png" alt="Memory 3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="photo-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://i.imgur.com/SMrCouP.png" alt="Memory 4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="message-board"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Dear Sanjana,&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;You are my favorite thing that ever happened to me. I never thought a simple meeting would turn into something I’d care about this much. You are not just someone I love — you are home.</p>
+<p class="p2"><br></p>
+<p class="p1">No matter what happens, where life takes us, you’ll always be my most special story.</p>
+<p class="p2"><br></p>
+<p class="p1">These past three months have been nothing short of magical. Every day with you feels like a new adventure, and I'm grateful for every moment we share together.</p>
+<p class="p1"><span class="Apple-converted-space">         </span>Yours, Zuzubi(mukesh)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="special-moment"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">               </span>“Some people meet by accident, some by fate, but the best ones—like us—meet because the universe made sure we did.”</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Looking forward to creating countless more beautiful memories with you.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="milestone-timeline"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="timeline-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;The First ‘I Love You’❤️&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;It wasn’t just about saying the words—it was the way I felt them, deep in my heart. Like this was something real, something beyond just emotions. It was a connection I never knew could exist.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="timeline-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Our First Hello💬&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;A simple “hey,” a small moment, but somehow, it meant more than that. It wasn’t just a greeting—it was the start of us.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="timeline-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;First "I Like You"💗&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;It happened slowly, in between all those little moments—the way we talked, laughed, understood each other without even trying. I didn’t even realize when liking you became the most natural thing.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="love-quote"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"In your eyes, I found my home. In your smile, I found my happiness. In your love, I found my forever."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="music-player" id="music-toggle"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>🎵</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;audio id="background-music" loop&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;source src="song.mp3" type="audio/mpeg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Your browser does not support the audio element.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/audio&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Floating Hearts Animation</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function createHeart() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const heart = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>heart.className = 'heart';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>heart.innerHTML = '❤️';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>heart.style.left = Math.random() * 100 + 'vw';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>heart.style.animationDuration = (Math.random() * 3 + 3) + 's';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('hearts-container').appendChild(heart);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>heart.remove();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}, 6000);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>setInterval(createHeart, 300);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Countdown Timer</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function updateCountdown() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const now = new Date();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const tomorrow = new Date(now);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tomorrow.setDate(tomorrow.getDate() + 1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tomorrow.setHours(0, 0, 0, 0);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const diff = tomorrow - now;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const hours = Math.floor(diff / (1000 * 60 * 60));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const seconds = Math.floor((diff % (1000 * 60)) / 1000);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('hours').textContent = hours.toString().padStart(2, '0');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>setInterval(updateCountdown, 1000);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>updateCountdown();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Smooth scroll for photo gallery</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const gallery = document.querySelector('.photo-gallery');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let isDown = false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let startX;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let scrollLeft;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>gallery.addEventListener('mousedown', (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>isDown = true;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>startX = e.pageX - gallery.offsetLeft;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>scrollLeft = gallery.scrollLeft;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>gallery.addEventListener('mouseleave', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>isDown = false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>gallery.addEventListener('mouseup', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>isDown = false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>gallery.addEventListener('mousemove', (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!isDown) return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const x = e.pageX - gallery.offsetLeft;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const walk = (x - startX) * 2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gallery.scrollLeft = scrollLeft - walk;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Music toggle</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let isPlaying = false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const musicToggle = document.getElementById('music-toggle');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const backgroundMusic = document.getElementById('background-music');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>musicToggle.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>isPlaying = !isPlaying;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (isPlaying) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>backgroundMusic.play();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>musicToggle.textContent = '🔊';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>backgroundMusic.pause();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>musicToggle.textContent = '🎵';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
